@@ -1,0 +1,313 @@
+fileFormatVersion: 2
+guid: 0bfdbb3e45564d74db671ea05d50db40
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: 5_Body_1_0_0
+    100002: 5_Eyes_1_0_0
+    100004: 5_Teeth_1_0_0
+    100006: 5_Tongue_1_0_0
+    100008: head ear left a
+    100010: head ear left b
+    100012: head ear left b_end
+    100014: head ear right a
+    100016: head ear right b
+    100018: head ear right b_end
+    100020: head eyeball left
+    100022: head eyeball left_end
+    100024: head eyeball right
+    100026: head eyeball right_end
+    100028: head eyelid left lower
+    100030: head eyelid left lower_end
+    100032: head eyelid left upper
+    100034: head eyelid left upper_end
+    100036: head eyelid right lower
+    100038: head eyelid right lower_end
+    100040: head eyelid right upper
+    100042: head eyelid right upper_end
+    100044: head jaw
+    100046: head neck
+    100048: head tongue a
+    100050: head tongue b
+    100052: head tongue c
+    100054: head tongue d
+    100056: head tongue d_end
+    100058: leg ankle back left
+    100060: leg ankle back right
+    100062: leg ankle front left
+    100064: leg ankle front right
+    100066: leg knee back left
+    100068: leg knee back right
+    100070: leg knee front left
+    100072: leg knee front right
+    100074: leg thigh back left
+    100076: leg thigh back right
+    100078: leg thigh front left
+    100080: leg thigh front right
+    100082: leg toes back left
+    100084: leg toes back left_end
+    100086: leg toes back right
+    100088: leg toes back right_end
+    100090: leg toes front left
+    100092: leg toes front left_end
+    100094: leg toes front right
+    100096: leg toes front right_end
+    100098: //RootNode
+    100100: pelvis
+    100102: Rig
+    100104: root ground
+    100106: root hips
+    100108: spine lower
+    100110: spine upper
+    100112: tail a
+    100114: tail b
+    100116: tail c
+    100118: tail d
+    100120: tail d_end
+    400000: 5_Body_1_0_0
+    400002: 5_Eyes_1_0_0
+    400004: 5_Teeth_1_0_0
+    400006: 5_Tongue_1_0_0
+    400008: head ear left a
+    400010: head ear left b
+    400012: head ear left b_end
+    400014: head ear right a
+    400016: head ear right b
+    400018: head ear right b_end
+    400020: head eyeball left
+    400022: head eyeball left_end
+    400024: head eyeball right
+    400026: head eyeball right_end
+    400028: head eyelid left lower
+    400030: head eyelid left lower_end
+    400032: head eyelid left upper
+    400034: head eyelid left upper_end
+    400036: head eyelid right lower
+    400038: head eyelid right lower_end
+    400040: head eyelid right upper
+    400042: head eyelid right upper_end
+    400044: head jaw
+    400046: head neck
+    400048: head tongue a
+    400050: head tongue b
+    400052: head tongue c
+    400054: head tongue d
+    400056: head tongue d_end
+    400058: leg ankle back left
+    400060: leg ankle back right
+    400062: leg ankle front left
+    400064: leg ankle front right
+    400066: leg knee back left
+    400068: leg knee back right
+    400070: leg knee front left
+    400072: leg knee front right
+    400074: leg thigh back left
+    400076: leg thigh back right
+    400078: leg thigh front left
+    400080: leg thigh front right
+    400082: leg toes back left
+    400084: leg toes back left_end
+    400086: leg toes back right
+    400088: leg toes back right_end
+    400090: leg toes front left
+    400092: leg toes front left_end
+    400094: leg toes front right
+    400096: leg toes front right_end
+    400098: //RootNode
+    400100: pelvis
+    400102: Rig
+    400104: root ground
+    400106: root hips
+    400108: spine lower
+    400110: spine upper
+    400112: tail a
+    400114: tail b
+    400116: tail c
+    400118: tail d
+    400120: tail d_end
+    2100000: Material.004
+    2100002: lambert2.001
+    2100004: lambert3.001
+    4300000: 5_Body_1_0_0
+    4300002: 5_Tongue_1_0_0
+    4300004: 5_Eyes_1_0_0
+    4300006: 5_Teeth_1_0_0
+    7400000: Attack
+    7400002: Idle1
+    7400004: Idle
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: 5_Body_1_0_0
+    13700002: 5_Eyes_1_0_0
+    13700004: 5_Teeth_1_0_0
+    13700006: 5_Tongue_1_0_0
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Attack
+      takeName: Rig|RigAction.001
+      firstFrame: 0
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Idle1
+      takeName: Rig|RigAction.001
+      firstFrame: 80
+      lastFrame: 140
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Idle
+      takeName: Rig|RigAction.001
+      firstFrame: 80
+      lastFrame: 81
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

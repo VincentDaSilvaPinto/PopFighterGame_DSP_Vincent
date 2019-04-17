@@ -1,0 +1,215 @@
+fileFormatVersion: 2
+guid: 76e6398d48d332f4abf6a088b1a7c425
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Plane_000
+    100004: Plane_002
+    100006: Plane_004
+    100008: Plane_1077
+    100010: Plane_321
+    100012: Rock_004
+    100014: Tree
+    100016: Tree_001
+    100018: Tree_002
+    100020: Tree_003
+    100022: Tree_004
+    100024: Tree_005
+    100026: Tree_006
+    100028: Tree_007
+    100030: weed14_weed15_weed16_weed17_weed18_weed19_weed20_weed21_000
+    400000: //RootNode
+    400002: Plane_000
+    400004: Plane_002
+    400006: Plane_004
+    400008: Plane_1077
+    400010: Plane_321
+    400012: Rock_004
+    400014: Tree
+    400016: Tree_001
+    400018: Tree_002
+    400020: Tree_003
+    400022: Tree_004
+    400024: Tree_005
+    400026: Tree_006
+    400028: Tree_007
+    400030: weed14_weed15_weed16_weed17_weed18_weed19_weed20_weed21_000
+    2100000: Trunk_007
+    2100002: Trunk_005
+    2100004: Branches2D_005
+    2100006: Trunk_003
+    2100008: Branches_004
+    2100010: Leaves_004
+    2100012: Trunk_002
+    2100014: Branches_003
+    2100016: Branches2D_003
+    2100018: Leaves_003
+    2100020: Trunk_001
+    2100022: Leaves_006
+    2100024: Material__4882_033
+    2100026: Material__4882_032
+    2100028: Material__4882_031
+    2100030: Material__4882_030
+    2100032: Material__4882_029
+    2100034: Material__4882_028
+    2100036: Material__4882_027
+    2100038: Material__4882_026
+    2100040: Material__4882_005
+    2100042: Material__4882_002
+    2100044: Material__4882_003
+    2100046: Material__4882_004
+    2100048: Material__4882_009
+    2100050: Material__4882_008
+    2100052: Material__4882_007
+    2100054: Material__4882_006
+    2100056: Material__4882_041
+    2100058: Material__4882_040
+    2100060: Material__4882_039
+    2100062: Material__4882_038
+    2100064: Material__4882_037
+    2100066: Material__4882_036
+    2100068: Material__4882_035
+    2100070: Material__4882_034
+    2100072: Rock_004
+    2100074: Rock
+    2100076: Rock_001
+    2100078: Rock_002
+    2100080: Rock_003
+    2100082: Rock_005
+    2100084: Trunk_008
+    2100086: Trunk_009
+    2100088: Trunk_010
+    2300000: Plane_000
+    2300002: Plane_002
+    2300004: Plane_004
+    2300006: Plane_1077
+    2300008: Plane_321
+    2300010: Rock_004
+    2300012: Tree
+    2300014: Tree_001
+    2300016: Tree_002
+    2300018: Tree_003
+    2300020: Tree_004
+    2300022: Tree_005
+    2300024: Tree_006
+    2300026: Tree_007
+    2300028: weed14_weed15_weed16_weed17_weed18_weed19_weed20_weed21_000
+    3300000: Plane_000
+    3300002: Plane_002
+    3300004: Plane_004
+    3300006: Plane_1077
+    3300008: Plane_321
+    3300010: Rock_004
+    3300012: Tree
+    3300014: Tree_001
+    3300016: Tree_002
+    3300018: Tree_003
+    3300020: Tree_004
+    3300022: Tree_005
+    3300024: Tree_006
+    3300026: Tree_007
+    3300028: weed14_weed15_weed16_weed17_weed18_weed19_weed20_weed21_000
+    4300000: Tree_004
+    4300002: Tree_003
+    4300004: Plane_002
+    4300006: Tree_002
+    4300008: Plane_000
+    4300010: Tree
+    4300012: Plane_321
+    4300014: Plane_1077
+    4300016: Tree_001
+    4300018: Plane_004
+    4300020: weed14_weed15_weed16_weed17_weed18_weed19_weed20_weed21_000
+    4300022: Rock_004
+    4300024: Tree_005
+    4300026: Tree_006
+    4300028: Tree_007
+    7400000: Default Take
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
