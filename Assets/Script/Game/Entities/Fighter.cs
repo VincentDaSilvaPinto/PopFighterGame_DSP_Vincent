@@ -15,7 +15,7 @@ public class Fighter : MonoBehaviour
     {
         get { return health / MaxHealth; }
         set { if (value <= 1 && value >= 0) { HealthPercent = value; } }
-    } 
+    }
     public float powerBarPercent { get { return powerBar / MaxPowerBar; } }
 
     public string fighterName;
@@ -23,12 +23,12 @@ public class Fighter : MonoBehaviour
     public PlayerType playerType;
     public FighterStates currentState = FighterStates.Idle;
     public bool usePower;
-    
+
     public bool enable;
     private Rigidbody body;
     public CapsuleCollider capsule;
     public Rigidbody Body { get { return this.body; } }
-    
+
     public Animator Animator { get { return animator; } }
 
     //Pour IA
@@ -58,8 +58,8 @@ public class Fighter : MonoBehaviour
         currentRotation = PlayerPosition();
 
         //Permet de fixer les joueurs sur l'axe z en fixant le fxant sur x à 0
-        transform.SetPositionAndRotation(new Vector3(0, transform.position.y, transform.position.z), transform.rotation); 
-        
+        transform.SetPositionAndRotation(new Vector3(0, transform.position.y, transform.position.z), transform.rotation);
+
         // Permet d'avoir l'orientation des joueurs 
         int motion = Orientation(currentRotation);
 
@@ -78,7 +78,7 @@ public class Fighter : MonoBehaviour
 
         //Permet de connaitre sa hauteur par rapport au sol
         animator.SetFloat("DistanceFloor", GetDistanceFloor());
-        
+
         //Permet de connaitre la distance entre les deux joueurs
         animator.SetFloat("DistanceOpponent", GetDistanceOpponnent());
 
@@ -95,9 +95,9 @@ public class Fighter : MonoBehaviour
                 animator.SetBool("Jump", false); animator.SetBool("JumpFoward", false);
             }
         }
-        if ((currentState==FighterStates.JumpFall|| currentState == FighterStates.Idle) && GetDistanceOpponnent()<=3 && GetDistanceFloor()>=4)
+        if ((currentState == FighterStates.JumpFall || currentState == FighterStates.Idle) && GetDistanceOpponnent() <= 3 && GetDistanceFloor() >= 4)
         {
-            transform.position = Vector3.Lerp(transform.position, new Vector3(0, transform.position.y, transform.position.z - motion*4), Time.deltaTime * 7);
+            transform.position = Vector3.Lerp(transform.position, new Vector3(0, transform.position.y, transform.position.z - motion * 4), Time.deltaTime * 7);
         }
 
         //permet ce savoir si le joueur use d'un pouvoir
@@ -105,24 +105,24 @@ public class Fighter : MonoBehaviour
         {
             usePower = true;
             opponent.animator.SetTrigger("UsePowerOpponent");
-            
+
         }
-        if (currentState != FighterStates.PowerPerso )
+        if (currentState != FighterStates.PowerPerso)
         {
             usePower = false;
         }
 
         //Permet de prévnir d'une sortie de terrain 
-        if (transform.position.z>=230)
+        if (transform.position.z >= 230)
         {
             transform.position = new Vector3(0, 0, 225);
         }
 
-        if(transform.position.z<=-100)
+        if (transform.position.z <= -100)
         {
             transform.position = new Vector3(0, 0, -95);
         }
-        if (transform.position.y <=-1 && currentState!=FighterStates.DeadEnd)
+        if (transform.position.y <= -1 && currentState != FighterStates.DeadEnd)
         {
             transform.position = new Vector3(0, 0, transform.position.z);
         }
@@ -146,7 +146,6 @@ public class Fighter : MonoBehaviour
             }
         }
 
-      
         animator.SetFloat("Health", HealthPercent);
         animator.SetFloat("PowerBar", powerBarPercent);
 
@@ -163,12 +162,12 @@ public class Fighter : MonoBehaviour
         {
             animator.SetTrigger("Death");
         }
-        if (health >= 0 && (currentState != FighterStates.Celebrate && (opponent.currentState == FighterStates.DeadEnd|| opponent.currentState == FighterStates.Dead)))
+        if (health >= 0 && (currentState != FighterStates.Celebrate && (opponent.currentState == FighterStates.DeadEnd || opponent.currentState == FighterStates.Dead)))
         {
             animator.SetTrigger("Celebrate");
         }
     }
-    
+
     //  Permet d'avoir des effets sonors liés aux animations jouées
     public void PlaySound(AudioClip sound)
     {
@@ -209,10 +208,10 @@ public class Fighter : MonoBehaviour
     {
         get
         {
-            return ((currentState == FighterStates.Hit_Defend && opponent.currentState!=FighterStates.Combo )|| currentState == FighterStates.Dead || 
-                (currentState == FighterStates.Defend && opponent.currentState != FighterStates.Combo )||currentState == FighterStates.Teleportation ||
-                currentState == FighterStates.PowerPerso || currentState == FighterStates.Combo || currentState==FighterStates.Hit_Fall || currentState == FighterStates.Hit_Power ||
-                Attack && opponent.currentState==FighterStates.Hit );
+            return ((currentState == FighterStates.Hit_Defend && opponent.currentState != FighterStates.Combo) || currentState == FighterStates.Dead ||
+                (currentState == FighterStates.Defend && opponent.currentState != FighterStates.Combo) || currentState == FighterStates.Teleportation ||
+                currentState == FighterStates.PowerPerso || currentState == FighterStates.Combo || currentState == FighterStates.Hit_Fall || currentState == FighterStates.Hit_Power ||
+                Attack && opponent.currentState == FighterStates.Hit);
         }
     }
     //  Permet de savoir si le personnage defend
@@ -229,7 +228,7 @@ public class Fighter : MonoBehaviour
             return (currentState == FighterStates.PunchL || currentState == FighterStates.PunchR ||
               currentState == FighterStates.KickL || currentState == FighterStates.KickR ||
               currentState == FighterStates.DoubleKick || currentState == FighterStates.DoublePunch
-              || currentState == FighterStates.Combo || currentState == FighterStates.PowerPerso || currentState==FighterStates.PunchUpperCut
+              || currentState == FighterStates.Combo || currentState == FighterStates.PowerPerso || currentState == FighterStates.PunchUpperCut
               || currentState == FighterStates.JumpAttack);
         }
     }
@@ -254,7 +253,7 @@ public class Fighter : MonoBehaviour
     // Retirer de la vie au personnage 
     public virtual void Damage(float damage)
     {
-        if (!Invunerable && Orientation(currentRotation)==opponent.Orientation(currentRotation)  )
+        if (!Invunerable && Orientation(currentRotation) == opponent.Orientation(currentRotation))
         {
 
             if (health >= damage) { health -= damage; }
@@ -273,7 +272,6 @@ public class Fighter : MonoBehaviour
         {
             animator.SetTrigger("Hit-Defend"); opponent.powerBar += 0.05f;
         }
-
     }
 
 
@@ -281,7 +279,7 @@ public class Fighter : MonoBehaviour
     public void UpdateIA(int motion)
     {
         animator.SetBool("AttackingOpponent", opponent.Attack);
-       
+
         animator.SetBool("OpponentFall", opponent.currentState == FighterStates.Hit_Fall || opponent.currentState == FighterStates.Hit_Power);
         animator.SetBool("Enable", enable);
 
@@ -289,20 +287,27 @@ public class Fighter : MonoBehaviour
         {
             powerBar = 0;
         }
-        if (currentState==FighterStates.Teleportation)
+        if (currentState == FighterStates.Teleportation && currentState != FighterStates.Hit_Power)
         {
             if (!opponent.animator.GetBool("Floor"))
             {
                 opponent.animator.SetTrigger("Recovery");
             }
-            transform.SetPositionAndRotation(new Vector3(0, opponent.transform.position.y, opponent.transform.position.z - motion * 5), transform.rotation);
-           
+            if (opponent.currentState == FighterStates.PowerPerso)
+            {
+                transform.SetPositionAndRotation(new Vector3(0, 0, opponent.transform.position.z - motion * 5.5f), transform.rotation);
+            }
+            else
+            {
+                transform.SetPositionAndRotation(new Vector3(0, opponent.transform.position.y, opponent.transform.position.z - motion * 5.5f), transform.rotation);
+            }
+
         }
         if (currentState == FighterStates.Load)
         {
             powerBar += 0.001f;
         }
-            if (Time.time - randomSetTime > 1)
+        if (Time.time - randomSetTime > 1)
         {
             random = Random.Range(-1.0f, 1.0f);
             randomSetTime = Time.time;
@@ -310,7 +315,7 @@ public class Fighter : MonoBehaviour
         animator.SetFloat("Random", random);
 
     }
-    
+
     //  Entrer si joueur humain
     public void UpdateJoueur1Input(int motion)
     {
@@ -340,7 +345,7 @@ public class Fighter : MonoBehaviour
         if (motion * Input.GetAxisRaw("Horizontal") > 0.1)
         {
             //saut avant
-            if (Input.GetKeyDown(KeyCode.UpArrow) && animator.GetBool("Floor") && currentState!=FighterStates.Hit && currentState != FighterStates.Hit_Fall)
+            if (Input.GetKeyDown(KeyCode.UpArrow) && animator.GetBool("Floor") && currentState != FighterStates.Hit && currentState != FighterStates.Hit_Fall)
             {
 
                 animator.SetBool("JumpFoward", true);
@@ -349,7 +354,8 @@ public class Fighter : MonoBehaviour
                 animator.SetBool("Walk-Back", false);
                 //Debug.Log(fighterName + " saut avant");
 
-            }else { animator.SetBool("Walk", true); }
+            }
+            else { animator.SetBool("Walk", true); }
 
         }
         else { animator.SetBool("Walk", false); }
@@ -371,8 +377,15 @@ public class Fighter : MonoBehaviour
             {
                 opponent.animator.SetTrigger("Recovery");
             }
+            if (opponent.currentState == FighterStates.PowerPerso)
+            {
+                transform.SetPositionAndRotation(new Vector3(0, 0, opponent.transform.position.z - motion * 5.5f), transform.rotation);
+            }
+            else
+            {
+                transform.SetPositionAndRotation(new Vector3(0, opponent.transform.position.y, opponent.transform.position.z - motion * 6), transform.rotation);
+            }
             animator.SetTrigger("Teleportation");
-            transform.SetPositionAndRotation(new Vector3(0, opponent.transform.position.y, opponent.transform.position.z - motion * 6), transform.rotation);
             powerBar -= 1;
         }
 
@@ -380,7 +393,7 @@ public class Fighter : MonoBehaviour
         if (currentState == FighterStates.Hit_Fall && !animator.GetBool("Floor"))
         {
             if ((Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.UpArrow) ||
-               Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.DownArrow))&& GetDistanceOpponnent()>=10)
+               Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.DownArrow)) && GetDistanceOpponnent() >= 10)
             {
                 animator.SetTrigger("Recovery");
             }
@@ -400,11 +413,11 @@ public class Fighter : MonoBehaviour
         }
 
         //Attaque simple
-        if (Input.GetKeyDown(KeyCode.Q) && !Input.GetKeyDown(KeyCode.D) && currentState != FighterStates.Hit && currentState!=FighterStates.Load && currentState!=FighterStates.DoublePunch)
+        if (Input.GetKeyDown(KeyCode.Q) && !Input.GetKeyDown(KeyCode.D) && currentState != FighterStates.Hit && currentState != FighterStates.Load && currentState != FighterStates.DoublePunch)
         { animator.SetTrigger("Punch"); }
 
         if (Input.GetKeyDown(KeyCode.D) && !Input.GetKeyDown(KeyCode.Q) && currentState != FighterStates.Hit && currentState != FighterStates.Load && currentState != FighterStates.KickR)
-        { animator.SetTrigger("Kick");}
+        { animator.SetTrigger("Kick"); }
 
         // Attaque Combo
         if (Input.GetKey(KeyCode.DownArrow))
@@ -433,13 +446,12 @@ public class Fighter : MonoBehaviour
                     powerBar += -3;
                 }
             }
-            
         }
 
         // Recharge Pouvoir
-        if ( Input.GetKey(KeyCode.Q) && Input.GetKey(KeyCode.D) && currentState != FighterStates.Hit &&
+        if (Input.GetKey(KeyCode.Q) && Input.GetKey(KeyCode.D) && currentState != FighterStates.Hit &&
             currentState != FighterStates.Hit_Defend && currentState != FighterStates.Hit_Fall && animator.GetBool("Floor")
-            && currentState!=FighterStates.Defend && !Attack)
+            && currentState != FighterStates.Defend && !Attack)
         {
             animator.SetBool("Load", true);
             if (powerBar < 7)
